@@ -1,0 +1,80 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+            ITSHofmann\ItsPdfgen\Domain\Model\Session {
+                mapping {
+                    tableName = fe_sessions
+                    columns {						
+						ses_id.mapOnProperty = sessionid
+						ses_name.mapOnProperty = name
+						ses_iplock.mapOnProperty = iplock
+						ses_hashlock.mapOnProperty = hashlock
+						ses_userid.mapOnProperty = userid
+						ses_tstamp.mapOnProperty = tstamp
+						ses_data.mapOnProperty = sessionData
+					}
+                }
+            }
+    	}
+    }
+}
+
+
+tx_pdfgen_ajax1 = PAGE
+tx_pdfgen_ajax1 {
+  typeNum = 1702
+  config {
+    disableAllHeaderCode = 1
+    xhtml_cleaning = 0
+    admPanel = 0
+#    additionalHeaders = Content-type:application/pdf
+    no_cache = 1
+  }
+     
+  10 = USER
+  10 {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = ItsPdfgen
+    pluginName = Itspdfgen
+    vendorName = ITSHofmann
+    controller = Pdf
+    switchableControllerActions {
+      Pdf {
+        1 = createpdf
+      }
+    }
+    view < plugin.tx_myextension.view
+    persistence < plugin.tx_myextension.persistence
+    settings < plugin.tx_myextension.settings
+  }
+}
+
+tx_pdfgen_ajax = PAGE
+tx_pdfgen_ajax {
+  typeNum = 170266
+  config {
+    disableAllHeaderCode = 1
+    xhtml_cleaning = 0
+    admPanel = 0
+#    additionalHeaders = Content-type:application/pdf
+    no_cache = 1
+  }
+     
+  10 = USER
+  10 {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = ItsPdfgen
+    pluginName = Itspdfgen
+    vendorName = ITSHofmann
+    controller = Pdf
+    switchableControllerActions {
+      Pdf {
+        1 = setup
+      }
+    }
+    view < plugin.tx_myextension.view
+    persistence < plugin.tx_myextension.persistence
+    settings < plugin.tx_myextension.settings
+  }
+}

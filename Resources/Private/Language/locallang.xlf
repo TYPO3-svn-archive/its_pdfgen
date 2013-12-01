@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-11-30T08:42:09Z" product-name="its_pdfgen">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_itspdfgen_domain_model_pdf">
+				<source>Pdf</source>
+			</trans-unit>
+			<trans-unit id="tx_itspdfgen_domain_model_pdf.url">
+				<source>url</source>
+			</trans-unit>
+			<trans-unit id="tx_itspdfgen_domain_model_pdf.filename">
+				<source>filename</source>
+			</trans-unit>
+			<trans-unit id="tx_itspdfgen_domain_model_pdf.createdat">
+				<source>createdat</source>
+			</trans-unit>
+			<trans-unit id="tx_itspdfgen_domain_model_pdf.userid">
+				<source>userid</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

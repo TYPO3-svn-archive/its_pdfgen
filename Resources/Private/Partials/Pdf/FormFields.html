@@ -1,0 +1,16 @@
+<label for="url">
+	<f:translate key="tx_itspdfgen_domain_model_pdf.url" />
+</label><br />
+	<f:form.textfield property="url" /><br />
+<label for="filename">
+	<f:translate key="tx_itspdfgen_domain_model_pdf.filename" />
+</label><br />
+	<f:form.textfield property="filename" /><br />
+<label for="createdat">
+	<f:translate key="tx_itspdfgen_domain_model_pdf.createdat" />
+</label><br />
+	<f:form.textfield property="createdat"  value="{pdf.createdat->f:format.date()}" /><br />
+<label for="userid">
+	<f:translate key="tx_itspdfgen_domain_model_pdf.userid" />
+</label><br />
+	<f:form.textfield property="userid" /><br />

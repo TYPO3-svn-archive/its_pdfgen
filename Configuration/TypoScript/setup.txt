@@ -1,0 +1,42 @@
+plugin.tx_itspdfgen {
+	view {
+		templateRootPath = {$plugin.tx_itspdfgen.view.templateRootPath}
+		partialRootPath = {$plugin.tx_itspdfgen.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_itspdfgen.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_itspdfgen.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+		phantomJSBinary = {$plugin.tx_itspdfgen.settings.phantomJSBinary}
+	}
+}
+
+plugin.tx_itspdfgen._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-its-pdfgen table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-its-pdfgen table th {
+		font-weight:bold;
+	}
+
+	.tx-its-pdfgen table td {
+		vertical-align:top;
+	}
+)

@@ -1,0 +1,19 @@
+plugin.tx_itspdfgen {
+	view {
+		# cat=plugin.tx_itspdfgen/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:its_pdfgen/Resources/Private/Templates/
+		# cat=plugin.tx_itspdfgen/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:its_pdfgen/Resources/Private/Partials/
+		# cat=plugin.tx_itspdfgen/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:its_pdfgen/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_itspdfgen//a; type=string; label=Default storage PID
+		storagePid =
+	}
+	
+	settings {
+		# cat=plugin.tx_itspdfgen//a; type=string; label=PhantomJS Binary
+		phantomJSBinary =
+	}
+}
