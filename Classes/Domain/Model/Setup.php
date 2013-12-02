@@ -12,56 +12,139 @@ class Setup extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 
 	/**
-	 * ip
+	 * fullIp
 	 *
 	 * @var \string
 	 */
-	protected $ip;
+	protected $fullIp;
 	
 	/**
-	 * Returns the ip
+	 * Returns the fullIp
 	 *
-	 * @return \string $ip
+	 * @return \string $fullIp
 	 */
-	public function getIp() {
-		return $this->ip;
+	public function getFullIp() {
+		return $this->fullIp;
 	}
 
 	/**
-	 * Sets the ip
+	 * Sets the fullIp
 	 *
-	 * @param \string $ip
+	 * @param \string $fullIp
 	 * @return void
 	 */
-	public function setIp($ip) {
-		$this->ip = $ip;
+	public function setFullIp($fullIp) {
+		$this->fullIp = $fullIp;
 	}
 
 	/**
-	 * sessionid
+	 * sessionId
 	 *
 	 * @var \string
 	 */
-	protected $sessionid;
+	protected $sessionId;
 	
 	/**
-	 * Returns the sessionid
+	 * Returns the sessionId
 	 *
-	 * @return \string $sessionid
+	 * @return \string $sessionId
 	 */
-	public function getSessionid() {
-		return $this->sessionid;
+	public function getSessionId() {
+		return $this->sessionId;
 	}
 
 	/**
-	 * Sets the sessionid
+	 * Sets the sessionId
 	 *
-	 * @param \string $sessionid
+	 * @param \string $sessionId
 	 * @return void
 	 */
-	public function setSessionid($sessionid) {
-		$this->sessionid = $sessionid;
+	public function setSessionId($sessionId) {
+		$this->sessionId = $sessionId;
 	}
+
+
+	/**
+	 * ipLock
+	 *
+	 * @var \string
+	 */
+	protected $ipLock;
+	
+	/**
+	 * Returns the ipLock
+	 *
+	 * @return \string $ipLock
+	 */
+	public function getIpLock() {
+		return $this->ipLock;
+	}
+
+	/**
+	 * Sets the ipLock
+	 *
+	 * @param \string $ipLock
+	 * @return void
+	 */
+	public function setIpLock($ipLock) {
+		$this->ipLock = $ipLock;
+	}
+
+
+
+	/**
+	 * crdate
+	 *
+	 * @var \integer
+	 */
+	protected $crdate;
+	
+	/**
+	 * Returns the crdate
+	 *
+	 * @return \integer $crdate
+	 */
+	public function getCrdate() {
+		return $this->crdate;
+	}
+
+	/**
+	 * Sets the crdate
+	 *
+	 * @param \integer $crdate
+	 * @return void
+	 */
+	public function setCrdate($crdate) {
+		$this->crdate = $crdate;
+	}
+
+
+	/**
+	 * tstamp
+	 *
+	 * @var \integer
+	 */
+	protected $tstamp;
+	
+	/**
+	 * Returns the tstamp
+	 *
+	 * @return \integer $tstamp
+	 */
+	public function getTstamp() {
+		return $this->tstamp;
+	}
+
+	/**
+	 * Sets the tstamp
+	 *
+	 * @param \integer $tstamp
+	 * @return void
+	 */
+	public function setTstamp($tstamp) {
+		$this->tstamp = $tstamp;
+	}
+
 
 
 }

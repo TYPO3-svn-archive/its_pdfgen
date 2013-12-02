@@ -1,7 +1,6 @@
 config.tx_extbase{
     persistence{
         classes{
-
             ITSHofmann\ItsPdfgen\Domain\Model\Session {
                 mapping {
                     tableName = fe_sessions
@@ -16,6 +15,18 @@ config.tx_extbase{
 					}
                 }
             }
+            ITSHofmann\ItsPdfgen\Domain\Model\Setup {
+                mapping {                    
+                    columns {						
+						session_id.mapOnProperty = sessionId
+						ses_iplock.mapOnProperty = ipLock
+						full_ip.mapOnProperty = fullIp
+						crdate.mapOnProperty = crdate
+						tstamp.mapOnProperty = tstamp
+					}
+                }
+            }
+            
     	}
     }
 }
@@ -28,7 +39,7 @@ tx_pdfgen_ajax1 {
     disableAllHeaderCode = 1
     xhtml_cleaning = 0
     admPanel = 0
-#    additionalHeaders = Content-type:application/pdf
+#    additionalHeaders = Content-type: application/pdf
     no_cache = 1
   }
      
@@ -57,7 +68,7 @@ tx_pdfgen_ajax {
     disableAllHeaderCode = 1
     xhtml_cleaning = 0
     admPanel = 0
-#    additionalHeaders = Content-type:application/pdf
+#    additionalHeaders = Content-type: application/pdf
     no_cache = 1
   }
      

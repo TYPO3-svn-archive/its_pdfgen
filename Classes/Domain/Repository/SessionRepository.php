@@ -57,13 +57,6 @@ class SessionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	 */
 	public function add($object) {
 	
-		debug1($object->getSessionid());
-		debug1($object->getTstamp());
-		debug1($object->getUserid());
-		debug1($object->getHashlock());
-		debug1($object->getIplock());
-		debug1($object->getName());
-		
 		$fields = array();
 		$fields['ses_id'] = "'".$object->getSessionid()."'";
 		$fields['ses_name']  = "'".$object->getName()."'";

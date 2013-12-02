@@ -33,6 +33,32 @@ namespace ITSHofmann\ItsPdfgen\Domain\Repository;
  *
  */
 class SetupRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
-
+	
+	/**
+	 * The TYPO3 database object
+	 *
+	 * @var \TYPO3\CMS\Core\Database\DatabaseConnection
+	 */
+	protected $databaseHandle;
+   
+   	public function initializeObject() {
+		$this->databaseHandle = $GLOBALS['TYPO3_DB'];
+	}
+	
+	public function findByID($id) {
+ 		$query = $this->createQuery();
+		$query->getQuerySettings()->setRespectStoragePage(FALSE);
+    	return $query->matching($query->equals('sessionid', $id))->execute();
+	}
+	
+	public function getIpLockByUid($id) {
+		$tableName = 'tx_itspdfgen_domain_model_setup';
+		$sqlString = 'SELECT * FROM ' . $tableName . ' WHERE `uid` =' . $id.';' ;
+		// debug($sqlString,-2);
+		$res = $this->databaseHandle->sql_query($sqlString);
+		$row = $this->databaseHandle->sql_fetch_assoc($res);
+		return $row['ses_iplock'];
+		
+	}
 }
 ?>

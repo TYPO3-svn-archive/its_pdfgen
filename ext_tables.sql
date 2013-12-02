@@ -47,9 +47,13 @@ CREATE TABLE tx_itspdfgen_domain_model_pdf (
 CREATE TABLE tx_itspdfgen_domain_model_setup (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+	
+	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
+	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 
-	id varchar(255) DEFAULT '' NOT NULL,
-	sessionid varchar(255) DEFAULT '' NOT NULL,
+	ses_iplock varchar(255) DEFAULT '' NOT NULL,
+	full_ip varchar(255) DEFAULT '' NOT NULL,
+	session_id varchar(255) DEFAULT '' NOT NULL,
 	
 	PRIMARY KEY (uid)
 	

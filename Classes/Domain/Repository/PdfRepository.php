@@ -33,6 +33,17 @@ namespace ITSHofmann\ItsPdfgen\Domain\Repository;
  *
  */
 class PdfRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
-
+	public function  findByUserIDAndUrl ($userId,$url) {
+ 		$query = $this->createQuery();
+		$query->getQuerySettings()->setRespectStoragePage(FALSE);
+    	$query->matching(
+    		$query->logicalAnd(
+    			$query->equals('url', $url),
+				$query->equals('userid', $userId)
+			)
+		);
+		return $query->execute();
+	
+	}
 }
 ?>
